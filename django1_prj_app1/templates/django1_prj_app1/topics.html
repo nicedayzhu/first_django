@@ -1,0 +1,21 @@
+{% extends "django1_prj_app1/base.html" %}
+
+{% block header %}
+<h1>Topics</h1>
+{% endblock header %}
+
+{% block content %}
+
+    <ul>
+        {% for topic in topics %}
+            <li>
+                <h3>
+                    <a href="{% url 'django1_prj_app1:topic' topic.id %}">{{ topic }}</a>
+                </h3>
+            </li>
+        {% empty %}
+            <li>No topics have been added yet.</li>
+        {% endfor %}
+    </ul>
+    <h3><a href="{% url 'django1_prj_app1:new_topic' %}">Add a new topic:</a></h3>
+{% endblock content %}

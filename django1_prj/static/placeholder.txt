@@ -1,0 +1,2 @@
+This file ensures that django1_prj/static/ will be added to the project.
+Django will collect static files and place them in django1_prj/static/.
